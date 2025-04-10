@@ -8,16 +8,17 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/botao_Nulo"
+        android:id="@+id/botao_Percentagem"
         android:layout_width="78dp"
         android:layout_height="72dp"
         android:layout_marginStart="15dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         android:onClick="exibirValores"
-        android:text="+/-"
-        android:textColor="#58d81c"
+        android:text="%"
+        android:textColor="@color/white"
         android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/botao_0"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,7 +34,7 @@
         android:onClick="exibirValores"
         android:text="1"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/botao_Nulo"
+        app:layout_constraintBottom_toTopOf="@+id/botao_Percentagem"
         app:layout_constraintEnd_toStartOf="@+id/botao_2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/botao_4" />
@@ -61,8 +62,9 @@
         android:layout_marginBottom="10dp"
         android:onClick="exibirValores"
         android:text="-"
-        android:textColor="#58d81c"
+        android:textColor="@color/white"
         android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/botao_Somar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/botao_6"
@@ -76,8 +78,9 @@
         android:layout_marginBottom="10dp"
         android:onClick="exibirValores"
         android:text="x"
-        android:textColor="#58d81c"
+        android:textColor="@color/white"
         android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/botao_Subtrair"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/botao_9"
@@ -110,7 +113,7 @@
         app:layout_constraintBottom_toTopOf="@+id/botao_5"
         app:layout_constraintEnd_toStartOf="@+id/botao_9"
         app:layout_constraintStart_toEndOf="@+id/botao_7"
-        app:layout_constraintTop_toBottomOf="@+id/botao_Parenteses" />
+        app:layout_constraintTop_toBottomOf="@+id/botao_ParentesesEsquerdo" />
 
     <Button
         android:id="@+id/botao_9"
@@ -124,22 +127,23 @@
         app:layout_constraintBottom_toTopOf="@+id/botao_6"
         app:layout_constraintEnd_toStartOf="@+id/botao_Multiplicar"
         app:layout_constraintStart_toEndOf="@+id/botao_8"
-        app:layout_constraintTop_toBottomOf="@+id/botao_Percentagem" />
+        app:layout_constraintTop_toBottomOf="@+id/botao_ParentesesDireito" />
 
     <Button
-        android:id="@+id/botao_Percentagem"
+        android:id="@+id/botao_ParentesesDireito"
         android:layout_width="78dp"
         android:layout_height="72dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         android:onClick="exibirValores"
-        android:text="%"
-        android:textColor="#58d81c"
+        android:text=")"
+        android:textColor="@color/white"
         android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/botao_9"
         app:layout_constraintEnd_toStartOf="@+id/botao_Dividir"
-        app:layout_constraintStart_toEndOf="@+id/botao_Parenteses"
+        app:layout_constraintStart_toEndOf="@+id/botao_ParentesesEsquerdo"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
@@ -164,8 +168,9 @@
         android:layout_marginBottom="10dp"
         android:onClick="exibirValores"
         android:text=","
-        android:textColor="#58d81c"
+        android:textColor="@color/white"
         android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/botao_Resultado"
         app:layout_constraintStart_toEndOf="@+id/botao_0"
@@ -194,11 +199,12 @@
         android:layout_marginBottom="10dp"
         android:onClick="exibirValores"
         android:text="/"
-        android:textColor="#58d81c"
+        android:textColor="@color/white"
         android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/botao_Multiplicar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/botao_Percentagem"
+        app:layout_constraintStart_toEndOf="@+id/botao_ParentesesDireito"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
@@ -209,8 +215,9 @@
         android:layout_marginBottom="10dp"
         android:onClick="exibirValores"
         android:text="="
-        android:textColor="#58d81c"
+        android:textColor="@color/white"
         android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/botao_Virgula"
@@ -224,8 +231,9 @@
         android:layout_marginBottom="10dp"
         android:onClick="exibirValores"
         android:text="+"
-        android:textColor="#58d81c"
+        android:textColor="@color/white"
         android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/botao_Resultado"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/botao_3"
@@ -256,22 +264,24 @@
         android:textColor="#BA0E0E"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/botao_7"
-        app:layout_constraintEnd_toStartOf="@+id/botao_Parenteses"
+        app:layout_constraintEnd_toStartOf="@+id/botao_ParentesesEsquerdo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
-        android:id="@+id/botao_Parenteses"
+        android:id="@+id/botao_ParentesesEsquerdo"
         android:layout_width="78dp"
         android:layout_height="72dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         android:onClick="exibirValores"
-        android:text="()"
+        android:text="("
+        android:textColor="@color/white"
         android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/botao_8"
-        app:layout_constraintEnd_toStartOf="@+id/botao_Percentagem"
+        app:layout_constraintEnd_toStartOf="@+id/botao_ParentesesDireito"
         app:layout_constraintStart_toEndOf="@+id/limparTela"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -314,7 +324,7 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/botao_Virgula"
-        app:layout_constraintStart_toEndOf="@+id/botao_Nulo"
+        app:layout_constraintStart_toEndOf="@+id/botao_Percentagem"
         app:layout_constraintTop_toBottomOf="@+id/botao_2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
