@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/button26"
+        android:id="@+id/botao_Nulo"
         android:layout_width="78dp"
         android:layout_height="72dp"
         android:layout_marginStart="15dp"
@@ -16,161 +16,161 @@
         android:layout_marginBottom="10dp"
         android:text="+/-"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button27"
+        app:layout_constraintEnd_toStartOf="@+id/botao_0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button25" />
+        app:layout_constraintTop_toBottomOf="@+id/botao_1" />
 
     <Button
-        android:id="@+id/button25"
+        android:id="@+id/botao_1"
         android:layout_width="78dp"
         android:layout_height="72dp"
         android:layout_marginStart="15dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         android:text="1"
-        app:layout_constraintBottom_toTopOf="@+id/button26"
-        app:layout_constraintEnd_toStartOf="@+id/button24"
+        app:layout_constraintBottom_toTopOf="@+id/botao_Nulo"
+        app:layout_constraintEnd_toStartOf="@+id/botao_2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button16" />
+        app:layout_constraintTop_toBottomOf="@+id/botao_4" />
 
     <Button
-        android:id="@+id/button16"
+        android:id="@+id/botao_4"
         android:layout_width="78dp"
         android:layout_height="72dp"
         android:layout_marginStart="15dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         android:text="4"
-        app:layout_constraintBottom_toTopOf="@+id/button25"
-        app:layout_constraintEnd_toStartOf="@+id/button17"
+        app:layout_constraintBottom_toTopOf="@+id/botao_1"
+        app:layout_constraintEnd_toStartOf="@+id/botao_5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button11" />
+        app:layout_constraintTop_toBottomOf="@+id/botao_7" />
 
     <Button
-        android:id="@+id/button19"
+        android:id="@+id/botao_Subtrair"
         android:layout_width="78dp"
         android:layout_height="72dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         android:text="-"
-        app:layout_constraintBottom_toTopOf="@+id/button22"
+        app:layout_constraintBottom_toTopOf="@+id/botao_Somar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button18"
-        app:layout_constraintTop_toBottomOf="@+id/button14" />
+        app:layout_constraintStart_toEndOf="@+id/botao_6"
+        app:layout_constraintTop_toBottomOf="@+id/botao_Multiplicar" />
 
     <Button
-        android:id="@+id/button14"
+        android:id="@+id/botao_Multiplicar"
         android:layout_width="78dp"
         android:layout_height="72dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         android:text="X"
-        app:layout_constraintBottom_toTopOf="@+id/button19"
+        app:layout_constraintBottom_toTopOf="@+id/botao_Subtrair"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button13"
-        app:layout_constraintTop_toBottomOf="@+id/button4" />
+        app:layout_constraintStart_toEndOf="@+id/botao_9"
+        app:layout_constraintTop_toBottomOf="@+id/botao_Dividir" />
 
     <Button
-        android:id="@+id/button11"
+        android:id="@+id/botao_7"
         android:layout_width="78dp"
         android:layout_height="72dp"
         android:layout_marginStart="15dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         android:text="7"
-        app:layout_constraintBottom_toTopOf="@+id/button16"
-        app:layout_constraintEnd_toStartOf="@+id/button12"
+        app:layout_constraintBottom_toTopOf="@+id/botao_4"
+        app:layout_constraintEnd_toStartOf="@+id/botao_8"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/limparTela" />
 
     <Button
-        android:id="@+id/button12"
+        android:id="@+id/botao_8"
         android:layout_width="78dp"
         android:layout_height="72dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         android:text="8"
-        app:layout_constraintBottom_toTopOf="@+id/button17"
-        app:layout_constraintEnd_toStartOf="@+id/button13"
-        app:layout_constraintStart_toEndOf="@+id/button11"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintBottom_toTopOf="@+id/botao_5"
+        app:layout_constraintEnd_toStartOf="@+id/botao_9"
+        app:layout_constraintStart_toEndOf="@+id/botao_7"
+        app:layout_constraintTop_toBottomOf="@+id/botao_Parenteses" />
 
     <Button
-        android:id="@+id/button13"
+        android:id="@+id/botao_9"
         android:layout_width="78dp"
         android:layout_height="72dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         android:text="9"
-        app:layout_constraintBottom_toTopOf="@+id/button18"
-        app:layout_constraintEnd_toStartOf="@+id/button14"
-        app:layout_constraintStart_toEndOf="@+id/button12"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
+        app:layout_constraintBottom_toTopOf="@+id/botao_6"
+        app:layout_constraintEnd_toStartOf="@+id/botao_Multiplicar"
+        app:layout_constraintStart_toEndOf="@+id/botao_8"
+        app:layout_constraintTop_toBottomOf="@+id/botao_Percentagem" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/botao_Percentagem"
         android:layout_width="78dp"
         android:layout_height="72dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         android:text="%"
-        app:layout_constraintBottom_toTopOf="@+id/button13"
-        app:layout_constraintEnd_toStartOf="@+id/button4"
-        app:layout_constraintStart_toEndOf="@+id/button2"
+        app:layout_constraintBottom_toTopOf="@+id/botao_9"
+        app:layout_constraintEnd_toStartOf="@+id/botao_Dividir"
+        app:layout_constraintStart_toEndOf="@+id/botao_Parenteses"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
-        android:id="@+id/button18"
+        android:id="@+id/botao_6"
         android:layout_width="78dp"
         android:layout_height="72dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         android:text="6"
-        app:layout_constraintBottom_toTopOf="@+id/button23"
-        app:layout_constraintEnd_toStartOf="@+id/button19"
-        app:layout_constraintStart_toEndOf="@+id/button17"
-        app:layout_constraintTop_toBottomOf="@+id/button13" />
+        app:layout_constraintBottom_toTopOf="@+id/botao_3"
+        app:layout_constraintEnd_toStartOf="@+id/botao_Subtrair"
+        app:layout_constraintStart_toEndOf="@+id/botao_5"
+        app:layout_constraintTop_toBottomOf="@+id/botao_9" />
 
     <Button
-        android:id="@+id/button30"
+        android:id="@+id/botao_Virgula"
         android:layout_width="78dp"
         android:layout_height="72dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         android:text=","
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button28"
-        app:layout_constraintStart_toEndOf="@+id/button27"
-        app:layout_constraintTop_toBottomOf="@+id/button23" />
+        app:layout_constraintEnd_toStartOf="@+id/botao_Igual"
+        app:layout_constraintStart_toEndOf="@+id/botao_0"
+        app:layout_constraintTop_toBottomOf="@+id/botao_3" />
 
     <Button
-        android:id="@+id/button23"
+        android:id="@+id/botao_3"
         android:layout_width="78dp"
         android:layout_height="72dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         android:text="3"
-        app:layout_constraintBottom_toTopOf="@+id/button30"
-        app:layout_constraintEnd_toStartOf="@+id/button22"
-        app:layout_constraintStart_toEndOf="@+id/button24"
-        app:layout_constraintTop_toBottomOf="@+id/button18" />
+        app:layout_constraintBottom_toTopOf="@+id/botao_Virgula"
+        app:layout_constraintEnd_toStartOf="@+id/botao_Somar"
+        app:layout_constraintStart_toEndOf="@+id/botao_2"
+        app:layout_constraintTop_toBottomOf="@+id/botao_6" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/botao_Dividir"
         android:layout_width="78dp"
         android:layout_height="72dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         android:text="/"
-        app:layout_constraintBottom_toTopOf="@+id/button14"
+        app:layout_constraintBottom_toTopOf="@+id/botao_Multiplicar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button3"
+        app:layout_constraintStart_toEndOf="@+id/botao_Percentagem"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
-        android:id="@+id/button28"
+        android:id="@+id/botao_Igual"
         android:layout_width="78dp"
         android:layout_height="72dp"
         android:layout_marginEnd="10dp"
@@ -178,20 +178,20 @@
         android:text="="
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button30"
-        app:layout_constraintTop_toBottomOf="@+id/button22" />
+        app:layout_constraintStart_toEndOf="@+id/botao_Virgula"
+        app:layout_constraintTop_toBottomOf="@+id/botao_Somar" />
 
     <Button
-        android:id="@+id/button22"
+        android:id="@+id/botao_Somar"
         android:layout_width="78dp"
         android:layout_height="72dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         android:text="+"
-        app:layout_constraintBottom_toTopOf="@+id/button28"
+        app:layout_constraintBottom_toTopOf="@+id/botao_Igual"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button23"
-        app:layout_constraintTop_toBottomOf="@+id/button19" />
+        app:layout_constraintStart_toEndOf="@+id/botao_3"
+        app:layout_constraintTop_toBottomOf="@+id/botao_Subtrair" />
 
     <TextView
         android:id="@+id/textView"
@@ -204,7 +204,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/limparTela"
         android:layout_width="78dp"
         android:layout_height="72dp"
         android:layout_marginStart="15dp"
@@ -212,58 +212,58 @@
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         android:text="C"
-        app:layout_constraintBottom_toTopOf="@+id/button11"
-        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintBottom_toTopOf="@+id/botao_7"
+        app:layout_constraintEnd_toStartOf="@+id/botao_Parenteses"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/botao_Parenteses"
         android:layout_width="78dp"
         android:layout_height="72dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         android:text="()"
-        app:layout_constraintBottom_toTopOf="@+id/button12"
-        app:layout_constraintEnd_toStartOf="@+id/button3"
-        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/botao_8"
+        app:layout_constraintEnd_toStartOf="@+id/botao_Percentagem"
+        app:layout_constraintStart_toEndOf="@+id/limparTela"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
-        android:id="@+id/button17"
+        android:id="@+id/botao_5"
         android:layout_width="78dp"
         android:layout_height="72dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         android:text="5"
-        app:layout_constraintBottom_toTopOf="@+id/button24"
-        app:layout_constraintEnd_toStartOf="@+id/button18"
-        app:layout_constraintStart_toEndOf="@+id/button16"
-        app:layout_constraintTop_toBottomOf="@+id/button12" />
+        app:layout_constraintBottom_toTopOf="@+id/botao_2"
+        app:layout_constraintEnd_toStartOf="@+id/botao_6"
+        app:layout_constraintStart_toEndOf="@+id/botao_4"
+        app:layout_constraintTop_toBottomOf="@+id/botao_8" />
 
     <Button
-        android:id="@+id/button24"
+        android:id="@+id/botao_2"
         android:layout_width="78dp"
         android:layout_height="72dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         android:text="2"
-        app:layout_constraintBottom_toTopOf="@+id/button27"
-        app:layout_constraintEnd_toStartOf="@+id/button23"
-        app:layout_constraintStart_toEndOf="@+id/button25"
-        app:layout_constraintTop_toBottomOf="@+id/button17" />
+        app:layout_constraintBottom_toTopOf="@+id/botao_0"
+        app:layout_constraintEnd_toStartOf="@+id/botao_3"
+        app:layout_constraintStart_toEndOf="@+id/botao_1"
+        app:layout_constraintTop_toBottomOf="@+id/botao_5" />
 
     <Button
-        android:id="@+id/button27"
+        android:id="@+id/botao_0"
         android:layout_width="78dp"
         android:layout_height="72dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         android:text="0"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button30"
-        app:layout_constraintStart_toEndOf="@+id/button26"
-        app:layout_constraintTop_toBottomOf="@+id/button24" />
+        app:layout_constraintEnd_toStartOf="@+id/botao_Virgula"
+        app:layout_constraintStart_toEndOf="@+id/botao_Nulo"
+        app:layout_constraintTop_toBottomOf="@+id/botao_2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
