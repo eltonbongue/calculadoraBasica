@@ -117,6 +117,14 @@ class MainActivity : AppCompatActivity() {
                 return
             }
 
+            if (valorBotao == "%" && (textView.text.isEmpty() || textView.text.last() == '+' || textView.text.last() == 'x' || textView.text.last() == '/')) {
+                return
+            }
+
+            if (valorBotao == ")" && (textView.text.isEmpty() || textView.text.last() == '+' || textView.text.last() == 'x' || textView.text.last() == '/')) {
+                return
+            }
+
             textView.append(valorBotao)
         }
     }
