@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var button9: Button
     private lateinit var buttonSomar: Button
     private lateinit var buttonSubtrair: Button
-    private lateinit var buttonDividir:Button
+    private lateinit var buttonDividir: Button
     private lateinit var buttonResultado: Button
     private lateinit var limparTela: Button
 
@@ -40,8 +40,6 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
-        // Inicialização correta após o setContentView
 
         textView = findViewById(R.id.textView)
 
@@ -62,7 +60,6 @@ class MainActivity : AppCompatActivity() {
         limparTela = findViewById(R.id.limparTela)
     }
 
-    // Essa função será chamada pelo atributo android:onClick nos botões
     fun exibirValores(view: View) {
         if (view is Button) {
 
@@ -80,7 +77,7 @@ class MainActivity : AppCompatActivity() {
                     textView.text = resultadoSoma.toString()
                 }
 
-                 if (expressao.contains("-")) {
+                if (expressao.contains("-")) {
                     val resultadoSubtrair = subtrairNumeros(expressao)
                     textView.text = resultadoSubtrair.toString()
                 }
@@ -93,101 +90,103 @@ class MainActivity : AppCompatActivity() {
                 return
             }
 
-
-
             if (view.id == R.id.limparTela) {
-                textView.text = "" // Limpa a TextView
+                textView.text = ""
                 return
             }
 
-
             val valorBotao = view.text.toString()
+
+            if (valorBotao == "-" && (textView.text.isEmpty() || textView.text.last() == '+' || textView.text.last() == 'x' || textView.text.last() == '/')) {
+                return // Impede a inserção de "-" se a TextView estiver vazia ou terminar com outro operador
+            }
+
+            if (valorBotao == "+" && (textView.text.isEmpty() || textView.text.last() == '+' || textView.text.last() == 'x' || textView.text.last() == '/')) {
+                return
+            }
+
+            if (valorBotao == "x" && (textView.text.isEmpty() || textView.text.last() == '+' || textView.text.last() == 'x' || textView.text.last() == '/')) {
+                return
+            }
+
+            if (valorBotao == "/" && (textView.text.isEmpty() || textView.text.last() == '+' || textView.text.last() == 'x' || textView.text.last() == '/')) {
+                return
+            }
+
+            if (valorBotao == "." && (textView.text.isEmpty() || textView.text.last() == '+' || textView.text.last() == 'x' || textView.text.last() == '/')) {
+                return
+            }
+
             textView.append(valorBotao)
         }
-
-
-
-
-
     }
 
-    fun somarNumeros(expressao: String): Int {
-        // Divide a expressão usando espaços como separador (você pode mudar isso dependendo de como os números são separados)
-        val numeros = expressao.split("+") // Aqui assumimos que os números estão sendo separados por "+"
-        var soma = 0
+    fun somarNumeros(expressao: String): Double {
+        val numeros = expressao.split("+")
+        var soma = 0.0
 
-        // Converte os números para inteiros e soma
         for (numero in numeros) {
-            // Tenta converter para inteiro e soma
             try {
-                soma += numero.trim().toInt()
+                soma += numero.trim().toDouble()  // Converte para Double
             } catch (e: NumberFormatException) {
-                // Caso a conversão falhe, ignora
                 continue
             }
         }
         return soma
     }
 
-    fun subtrairNumeros(expressaoSubtrair: String): Int {
+    fun subtrairNumeros(expressaoSubtrair: String): Double {
         val numeros = expressaoSubtrair.split("-")
-        if (numeros.isEmpty()) return 0
-        var resultado = numeros[0].trim().toInt()  // Inicializa com o primeiro número
+        if (numeros.isEmpty()) return 0.0
+        var resultado = numeros[0].trim().toDouble()  // Inicializa com o primeiro número como Double
         for (i in 1 until numeros.size) {
             try {
-                resultado -= numeros[i].trim().toInt()
+                resultado -= numeros[i].trim().toDouble()  // Converte para Double
             } catch (e: NumberFormatException) {
                 continue
             }
         }
-
         return resultado
     }
 
-
-    fun multiplicarNumeros(expressaoMultiplicar: String): Int {
+    fun multiplicarNumeros(expressaoMultiplicar: String): Double {
         val numeros = expressaoMultiplicar.split("x")
-        var multiplicar = 1
+        var multiplicar = 1.0 // Inicializa como Double
 
         for (numero in numeros) {
             try {
-                multiplicar *= numero.trim().toInt()
+                multiplicar *= numero.trim().toDouble()  // Converte para Double
             } catch (e: NumberFormatException) {
-               continue
+                continue
             }
         }
 
         return multiplicar
     }
 
-    fun dividirNumeros(expressaoDividir: String): Int {
+    fun dividirNumeros(expressaoDividir: String): Double {
         val numeros = expressaoDividir.split("/")
         if (numeros.size != 2) {
             textView.text = "Erro: Expressão inválida"
-            return 0
+            return 0.0
         }
 
-        var resultado = numeros[0].trim().toInt()
+        var resultado = numeros[0].trim().toDouble()
 
-        // Tenta dividir pelo segundo número
         try {
-            val divisor = numeros[1].trim().toInt()
+            val divisor = numeros[1].trim().toDouble()
 
-            // Verifica se o divisor é zero
-            if (divisor == 0) {
+            if (divisor == 0.0) {
                 textView.text = "Erro: Divisão por zero"
-                return 0
+                return 0.0
             }
 
             resultado /= divisor
         } catch (e: NumberFormatException) {
             textView.text = "Erro: Número inválido"
-            return 0
+            return 0.0
         }
 
         return resultado
     }
-
-
-
 }
